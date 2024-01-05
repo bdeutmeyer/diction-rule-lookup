@@ -7,7 +7,7 @@ export default function Italian() {
 
     return (
         <>
-            <h2>Hello Italian</h2>
+            <h2>Italian</h2>
             <LetterList handleLetterChange={handleLetterChange} />
             <RuleCard currentLetter={currentLetter} />
         </>
