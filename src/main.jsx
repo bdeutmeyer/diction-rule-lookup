@@ -5,6 +5,7 @@ import App from './App.jsx'
 import './index.css'
 
 import Landing from './pages/Landing.jsx'
+import Error from './pages/Error.jsx'
 import French from './pages/French.jsx'
 import German from './pages/German.jsx'
 import Italian from './pages/Italian.jsx'
