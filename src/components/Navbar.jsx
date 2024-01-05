@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 export default function Navbar () {
     return (
         <>
-            <Link>
+            <Link to="/french">
             French
             </Link>
-            <Link>
+            <Link to="/german">
             German
             </Link>
-            <Link>
+            <Link to="/italian">
             Italian
             </Link>
         </>
