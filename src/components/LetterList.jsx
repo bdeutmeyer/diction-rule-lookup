@@ -1,11 +1,18 @@
-const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+import letters from '../data/letters'
 
-export default function LetterList() {
+
+export default function LetterList({ handleLetterChange }) {
     return (
         <>
-        <ul>
-            {letters.map((letter) => letter)}
-        </ul>
+            <ul>
+                {letters.map((l) => (
+                    <div key={l.key}>
+                        <button value={l.letter} onClick={handleLetterChange}>
+                            {l.letter}
+                        </button>
+                    </div>
+                ))}
+            </ul>
         </>
     )
 }
