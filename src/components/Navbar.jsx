@@ -1,15 +1,16 @@
 import { Link } from 'react-router-dom';
 
-export default function Navbar () {
+export default function Navbar ({ setCurrentLanguage }) {
+
     return (
         <>
-            <Link to="/french">
+            <Link key={1} to="/french" onClick={() => {setCurrentLanguage('french')}}>
             French
             </Link>
-            <Link to="/german">
+            <Link key={2} to="/german" value="German" onClick={() => {setCurrentLanguage('german')}}>
             German
             </Link>
-            <Link to="/italian">
+            <Link key={3} to="/italian" value="Italian" onClick={() => {setCurrentLanguage('italian')}}>
             Italian
             </Link>
         </>
