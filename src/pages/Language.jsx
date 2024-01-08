@@ -3,12 +3,12 @@ import SubList from "../components/SubList";
 import RuleCard from "../components/RuleCard"
 import { useOutletContext } from "react-router-dom"
 
-export default function French() {
+export default function Language() {
     const [currentLanguage, currentLetter, handleLetterChange, subArray, currentSub, handleSubChange] = useOutletContext();
-
+    const languageHeader = currentLanguage.toUpperCase()
     return (
         <>
-            <h2>French</h2>
+            <h3>{languageHeader}</h3>
             <LetterList handleLetterChange={handleLetterChange} />
             <SubList
                 currentLanguage={currentLanguage}
