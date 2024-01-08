@@ -6,9 +6,7 @@ import './index.css'
 
 import Landing from './pages/Landing.jsx'
 import Error from './pages/Error.jsx'
-import French from './pages/French.jsx'
-import German from './pages/German.jsx'
-import Italian from './pages/Italian.jsx'
+import Language from './pages/Language.jsx'
 
 const router = createBrowserRouter([
   {
@@ -21,13 +19,13 @@ const router = createBrowserRouter([
         element: <Landing />
       }, {
         path: '/french',
-        element: <French />
+        element: <Language />
       }, {
         path: '/german',
-        element: <German />
+        element: <Language />
       }, {
         path: '/italian',
-        element: <Italian />
+        element: <Language />
       }
     ]
   }
