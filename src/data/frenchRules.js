@@ -3,52 +3,87 @@ const frenchRules = [
         key: 1,
         primary: 'A',
         sub: 'a',
-        rules: {
-            1: 'blah',
-            2: 'blah2',
-            3: 'blah3',
-            4: 'blah4'
-        }
+        rules: [
+            {
+                key: 1,
+                rule: 'blah'
+            }, {
+                key: 2,
+                rule: 'blah2'
+            }, {
+                key: 3,
+                rule: 'blah3'
+            }   
+
+        ]
     }, {
         key: 2,
         primary: 'A',
         sub: 'ae',
-        rules: {
-            1: 'blah',
-            2: 'blah2',
-            3: 'blah3',
-            4: 'blah4'
-        }
+        rules: [
+            {
+                key: 1,
+                rule: 'blah'
+            }, {
+                key: 2,
+                rule: 'blah2'
+            }, {
+                key: 3,
+                rule: 'blah3'
+            }   
+
+        ]
     }, {
         key: 3,
         primary: 'A',
         sub: 'ai',
-        rules: {
-            1: 'blah',
-            2: 'blah2',
-            3: 'blah3',
-            4: 'blah4'
-        }
+        rules: [
+            {
+                key: 1,
+                rule: 'blah'
+            }, {
+                key: 2,
+                rule: 'blah2'
+            }, {
+                key: 3,
+                rule: 'blah3'
+            }   
+
+        ]
         }, {
         key: 4,
         primary: 'B',
         sub: 'b',
-        rules: {
-            1: 'blah',
-            2: 'blah2',
-            3: 'blah3',
-            4: 'blah4'
-        }
+        rules: [
+            {
+                key: 1,
+                rule: 'blah'
+            }, {
+                key: 2,
+                rule: 'blah2'
+            }, {
+                key: 3,
+                rule: 'blah3'
+            }   
+
+        ]
         }, {
         key: 5,
         primary: 'C',
         sub: 'ch',
-        rules: {
-            1: 'blah',
-            2: 'blah2',
-            3: 'blah3',
-            4: 'blah4'
-        }
+        rules: [
+            {
+                key: 1,
+                rule: 'blah'
+            }, {
+                key: 2,
+                rule: 'blah2'
+            }, {
+                key: 3,
+                rule: 'blah3'
+            }   
+
+        ]
     },
 ]
 

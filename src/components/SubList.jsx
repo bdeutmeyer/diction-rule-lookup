@@ -1,21 +1,4 @@
-import { useState } from 'react'
-import frenchRules from '../data/frenchRules'
-import germanRules from '../data/germanRules'
-import italianRules from '../data/italianRules'
-
-export default function SubList({ currentLanguage, currentLetter, subArray, handleSubChange }) {
-    let ruleSet;
-    switch (currentLanguage) {
-        case 'french':
-            ruleSet = frenchRules;
-            break;
-        case 'german':
-            ruleSet = germanRules;
-            break;
-        case 'italian':
-            ruleSet = italianRules;
-            break;
-    }
+export default function SubList({ currentLetter, ruleSet, subArray, handleSubChange }) {
 
     if (ruleSet) {
         for (let i = 0; i < ruleSet.length; i++) {
@@ -24,13 +7,9 @@ export default function SubList({ currentLanguage, currentLetter, subArray, hand
                 if (!findDuplicates) {
                     subArray.push(ruleSet[i])
                 }
-
             }
         }
-        console.log(subArray)
     }
-
-
 
     return (
         <>
