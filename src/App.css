@@ -4,3 +4,15 @@
   padding: 2rem;
   text-align: center;
 }
+
+#frenchBg {
+  background-image: url('./assets/images/french-flag.jpg');
+}
+
+#germanBg {
+  background-image: url('./assets/images/german-flag.jpg');
+}
+
+#italianBg {
+  background-image: url('./assets/images/italian-flag.jpg');
+}

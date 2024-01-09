@@ -1,17 +1,12 @@
-import { useState } from 'react'
-import frenchRules from '../data/frenchRules'
-import germanRules from '../data/germanRules'
-import italianRules from '../data/italianRules'
-
-export default function RuleCard({ currentLanguage, currentLetter, subArray }) {
-
-
+export default function RuleCard({ currentSub, subArray }) {
+    const selectedRules = subArray.find((index) => index.sub == currentSub)
     
-
     return (
         <>
         <h4>Rule Card</h4>
-
+        {selectedRules ? selectedRules.rules.map(rules => (
+            <div key={rules.key}>{rules.rule}</div>
+        )) : <div></div>}
         </>
     )
 }
