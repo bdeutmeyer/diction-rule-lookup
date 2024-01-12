@@ -1,4 +1,3 @@
-
 import LetterList from "../components/LetterList"
 import SubList from "../components/SubList";
 import RuleCard from "../components/RuleCard"
@@ -9,6 +8,17 @@ export default function Language() {
 
     const languageHeader = currentLanguage.toUpperCase()
 
+    let subsExist;
+    if (currentLetter) {
+        let currentLetterIndex = ruleSet.find((index) => index.primary == currentLetter)
+
+        if (currentLetterIndex && currentLetterIndex.sub === null) {
+            subsExist = false;
+        } else {
+            subsExist = true;
+        }
+    }
+
 
 
     return (
@@ -18,20 +28,28 @@ export default function Language() {
             </div>
             <div>
                 <LetterList handleLetterChange={handleLetterChange} />
-                <SubList
+                {subsExist === true ? <SubList
                     currentLanguage={currentLanguage}
                     currentLetter={currentLetter}
                     ruleSet={ruleSet}
                     subArray={subArray}
                     handleSubChange={handleSubChange}
-                />
+                /> :
+                    <></>
+                }
             </div>
-            <div >
-                <RuleCard
-                    currentSub={currentSub}
-                    subArray={subArray}
-                />
-            </div>
+            {currentLetter ?
+                <div >
+                    <RuleCard
+                        currentLetter={currentLetter}
+                        ruleSet={ruleSet}
+                        currentSub={currentSub}
+                        subArray={subArray}
+                    />
+                </div> :
+                <></>
+            }
+
         </>
 
 
