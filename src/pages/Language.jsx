@@ -19,8 +19,6 @@ export default function Language() {
         }
     }
 
-
-
     return (
         <>
             <div>
@@ -28,7 +26,8 @@ export default function Language() {
             </div>
             <div>
                 <LetterList handleLetterChange={handleLetterChange} />
-                {subsExist === true ? <SubList
+                {
+                    subsExist === true ? <SubList
                     currentLanguage={currentLanguage}
                     currentLetter={currentLetter}
                     ruleSet={ruleSet}
@@ -37,8 +36,16 @@ export default function Language() {
                 /> :
                     <></>
                 }
+                {
+                    subsExist == true && currentSub !== null ? <RuleCard
+                    currentLetter={currentLetter}
+                    ruleSet={ruleSet}
+                    currentSub={currentSub}
+                    subArray={subArray}
+                /> : <></>
+                }
             </div>
-            {currentLetter ?
+            {currentLetter && subsExist === false && currentSub === null ?
                 <div >
                     <RuleCard
                         currentLetter={currentLetter}
@@ -46,8 +53,7 @@ export default function Language() {
                         currentSub={currentSub}
                         subArray={subArray}
                     />
-                </div> :
-                <></>
+                </div> : <></>
             }
 
         </>
