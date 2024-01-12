@@ -11,7 +11,7 @@ import './App.css'
 export default function App() {
   const [currentLanguage, setCurrentLanguage] = useState('')
   const [currentLetter, setCurrentLetter] = useState('');
-  const [currentSub, setCurrentSub] = useState('');
+  const [currentSub, setCurrentSub] = useState(null);
 
   // Empty array for letter sublist population
   let subArray = []
@@ -30,11 +30,13 @@ export default function App() {
   const handleLetterChange = (event) => {
     setCurrentLetter(event.target.value);
     subArray = []
+    setCurrentSub(null)
   }
 
   const handleSubChange = (event) => {
     setCurrentSub(event.target.value)
 }
+
 let ruleSet;
 let languageBg;
 switch (currentLanguage) {
