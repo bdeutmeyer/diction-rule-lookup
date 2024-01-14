@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Header from './components/Header';
-import Navigation from './components/Navbar';
+import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import frenchRules from './data/frenchRules'
 import germanRules from './data/germanRules'
@@ -38,31 +38,48 @@ export default function App() {
 }
 
 let ruleSet;
-let languageBg;
+let langHeaderFont;
+let headerOne;
+let headerTwo;
+let headerThree;
 switch (currentLanguage) {
     case 'french':
         ruleSet = frenchRules;
-        languageBg = 'frenchBg';
+        langHeaderFont = 'frHeader';
+        headerOne = 'frenchOne';
+        headerTwo = 'frenchItTwo';
+        headerThree = 'frenchThree';
         break;
     case 'german':
         ruleSet = germanRules;
-        languageBg = 'germanBg';
+        langHeaderFont = 'grHeader';
+        headerOne = 'germanOne';
+        headerTwo = 'germanTwo';
+        headerThree = 'germanThree';
         break;
     case 'italian':
         ruleSet = italianRules;
-        languageBg = 'italianBg';
+        langHeaderFont = 'itHeader';
+        headerOne = 'italianOne';
+        headerTwo = 'frenchItTwo';
+        headerThree = 'italianThree';
         break;
 }
 
   return (
-    <div id={languageBg} className='bg-cover'>
-      <div className='bg-black/30'>
-      <Header />
-      <Navigation
+    <div className='bg-cover content'>
+      <div className='bg-gray-200/50 content'>
+      <Header 
+        className="content-center"
+        headerOne={headerOne}
+        headerTwo={headerTwo}
+        headerThree={headerThree}
+        />
+      <Navbar
         setCurrentLanguage={setCurrentLanguage}
       />
       <Outlet 
-        context={[currentLanguage, currentLetter, handleLetterChange, subArray, currentSub, handleSubChange, ruleSet]}
+        context={[currentLanguage, currentLetter, handleLetterChange, subArray, currentSub, handleSubChange, ruleSet, langHeaderFont]}
       />
       <Footer />
       </div>

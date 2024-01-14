@@ -1,10 +1,3 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
 #frenchBg {
   background-image: url('./assets/images/french-flag.jpg');
 }
@@ -15,4 +8,54 @@
 
 #italianBg {
   background-image: url('./assets/images/italian-flag.jpg');
+}
+
+.langHeader {
+  font-size: 2.2em;
+  line-height: 1.1;
+}
+
+#frHeader { 
+  font-family: 'Kaushan Script', cursive;
+}
+
+#grHeader {
+  font-family: 'Germania One', system-ui;
+}
+
+#itHeader {
+  font-family: 'Italiana', sans-serif;
+  font-weight: bold;
+}
+
+#frenchOne {
+  color: blue;
+}
+
+#frenchItTwo {
+  color: white;
+}
+
+#frenchThree {
+  color: red;
+}
+
+#germanOne {
+  color: black;
+}
+
+#germanTwo {
+  color: red;
+}
+
+#germanThree {
+  color: gold;
+}
+
+#italianOne {
+  color: green;
+}
+
+#italianThree {
+  color: red;
 }
