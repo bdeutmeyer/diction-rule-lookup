@@ -10,7 +10,7 @@ import './App.css'
 
 export default function App() {
   const [currentLanguage, setCurrentLanguage] = useState('')
-  const [currentLetter, setCurrentLetter] = useState('');
+  const [currentLetter, setCurrentLetter] = useState(null);
   const [currentSub, setCurrentSub] = useState(null);
 
   // Empty array for letter sublist population
@@ -26,13 +26,20 @@ export default function App() {
     }
   }, []);
 
+  //Click event handler for language changes
+  const handleLangChange = (event) => {
+    setCurrentLanguage(event.target.value);
+    setCurrentLetter(null);
+    setCurrentSub(null);
+  }
+
   //Click event handler for letter list
   const handleLetterChange = (event) => {
     setCurrentLetter(event.target.value);
     subArray = []
     setCurrentSub(null)
   }
-
+  //Click event handler for sub list
   const handleSubChange = (event) => {
     setCurrentSub(event.target.value)
 }
@@ -80,7 +87,7 @@ switch (currentLanguage) {
         headerThree={headerThree}
         />
       <Navbar
-        setCurrentLanguage={setCurrentLanguage}
+        handleLangChange={handleLangChange}
       />
       <Outlet 
         context={[currentLanguage, currentLetter, handleLetterChange, subArray, currentSub, handleSubChange, ruleSet, langHeaderFont, langHeaderClassName]}
