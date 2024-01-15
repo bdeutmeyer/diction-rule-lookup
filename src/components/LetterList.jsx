@@ -3,13 +3,13 @@ import letters from '../data/letters'
 export default function LetterList({ handleLetterChange }) {
     return (
         <>
-            <ul className='container flex flex-wrap'>
+            <ul className='container-fluid flex flex-wrap row justify-between bg-zinc-700 px-3'>
                 {letters.map((l) => (
-                    <div key={l.key} className=''>
-                        <button value={l.letter} onClick={handleLetterChange} className=''>
+                    <li key={l.key} className='col bg-zinc-700'>
+                        <button value={l.letter} onClick={handleLetterChange} className='tenor-sans text-zinc-100'>
                             {l.letter}
                         </button>
-                    </div>
+                    </li>
                 ))}
             </ul>
         </>

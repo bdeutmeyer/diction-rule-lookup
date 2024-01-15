@@ -12,11 +12,10 @@ export default function SubList({ currentLetter, ruleSet, subArray, handleSubCha
     }
 
     return (
-        <>
-        <h4>{currentLetter}</h4>
-        {ruleSet && subArray ? subArray.map(subs => (
-            <button key={subs.key} value={subs.sub} onClick={handleSubChange}>{subs.sub}</button>
-        )) : <div></div> }
-        </>
+        <div className="container-fluid flex justify-center">
+            {ruleSet && subArray ? subArray.map(subs => (
+            <button key={subs.key} value={subs.sub} onClick={handleSubChange} className='tenor-sans text-zinc-100 m-3'>{subs.sub}</button>
+        )) : <></> }
+        </div>
     )
 }

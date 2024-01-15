@@ -4,7 +4,7 @@ import RuleCard from "../components/RuleCard"
 import { useOutletContext } from "react-router-dom"
 
 export default function Language() {
-    const [currentLanguage, currentLetter, handleLetterChange, subArray, currentSub, handleSubChange, ruleSet, langHeaderFont] = useOutletContext();
+    const [currentLanguage, currentLetter, handleLetterChange, subArray, currentSub, handleSubChange, ruleSet, langHeaderFont, langHeaderClassName] = useOutletContext();
 
     const langHeaderText = currentLanguage.toUpperCase()
 
@@ -22,7 +22,7 @@ export default function Language() {
     return (
         <>
             <div>
-                <h3 id={langHeaderFont} className='langHeader p-3 text-center'>{langHeaderText}</h3>
+                <h3 id={langHeaderFont} className={langHeaderClassName}>{langHeaderText}</h3>
             </div>
             <div>
                 <LetterList handleLetterChange={handleLetterChange} />

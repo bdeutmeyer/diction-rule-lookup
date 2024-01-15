@@ -37,32 +37,36 @@ export default function App() {
     setCurrentSub(event.target.value)
 }
 
-let ruleSet;
-let langHeaderFont;
 let headerOne;
 let headerTwo;
 let headerThree;
+let ruleSet;
+let langHeaderFont;
+let langHeaderClassName;
 switch (currentLanguage) {
     case 'french':
-        ruleSet = frenchRules;
-        langHeaderFont = 'frHeader';
         headerOne = 'frenchOne';
         headerTwo = 'frenchItTwo';
         headerThree = 'frenchThree';
+        ruleSet = frenchRules;
+        langHeaderFont = 'frHeader';
+        langHeaderClassName = 'langHeader p-3 text-center bg-gradient-to-r from-blue-700 via-zinc-100 to-red-600';
         break;
     case 'german':
-        ruleSet = germanRules;
-        langHeaderFont = 'grHeader';
         headerOne = 'germanOne';
         headerTwo = 'germanTwo';
-        headerThree = 'germanThree';
+        headerThree = 'germanThree';     
+        ruleSet = germanRules;
+        langHeaderFont = 'grHeader';
+        langHeaderClassName = 'langHeader p-3 text-center bg-gradient-to-r from-zinc-950 via-red-500 to-yellow-400';
         break;
     case 'italian':
-        ruleSet = italianRules;
-        langHeaderFont = 'itHeader';
         headerOne = 'italianOne';
         headerTwo = 'frenchItTwo';
         headerThree = 'italianThree';
+        ruleSet = italianRules;
+        langHeaderFont = 'itHeader';
+        langHeaderClassName = 'langHeader p-3 text-center bg-gradient-to-r from-green-700 via-zinc-100 to-red-600';
         break;
 }
 
@@ -79,7 +83,7 @@ switch (currentLanguage) {
         setCurrentLanguage={setCurrentLanguage}
       />
       <Outlet 
-        context={[currentLanguage, currentLetter, handleLetterChange, subArray, currentSub, handleSubChange, ruleSet, langHeaderFont]}
+        context={[currentLanguage, currentLetter, handleLetterChange, subArray, currentSub, handleSubChange, ruleSet, langHeaderFont, langHeaderClassName]}
       />
       <Footer />
       </div>
