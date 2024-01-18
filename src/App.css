@@ -59,3 +59,18 @@
 #italianThree {
   color: red;
 }
+
+@font-face {
+  font-family: AndikaW;
+  src: url(./assets/andika-font/Andika-Regular.woff2);
+}
+
+@font-face {
+  font-family: AndikaW;
+  font-style: italic;
+  src: url(Andika-Italic.woff2);
+}
+
+.andika {
+  font-family: AndikaW;
+}

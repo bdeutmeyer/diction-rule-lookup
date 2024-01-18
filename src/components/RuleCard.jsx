@@ -6,56 +6,83 @@ export default function RuleCard({ currentLetter, ruleSet, currentSub, subArray 
 
     // Isolate and italicize code via ChatGPT:
     // Function to italicize based on special markers
-    const italicizeText = (text) => {
+    const formatText = (text) => {
         // Define the special marker for italicization
-        const marker = '@';
+        const italMarker = '@';
+        const andikaMarker = '#';
 
         // Split the text into segments based on the marker
-        const segments = text.split(marker);
+        const italSegments = text.split(italMarker);
 
         // Map through the segments and apply styling to alternate segments
-        const italicizedText = segments.map((segment, index) => (
+        const formattedText = italSegments.map((segment, index) => (
             index % 2 === 0 ? (
                 // Non-italicized segment
-                <span key={index}>{segment}</span>
+                <span key={index}>
+                    {/* Split the segment based on font marker */}
+                    {segment.split(andikaMarker).map((fontSegment, fontIndex) => (fontIndex % 2 === 0 ? (
+                            // Non-font-changed segment
+                            <span key={fontIndex}>{fontSegment}</span>
+                        ) : (
+                            // Font-changed segment
+                            <span key={fontIndex} className='andika'>{fontSegment}</span>
+                        )
+                    ))}
+                </span>
             ) : (
                 // Italicized segment
                 <i key={index}>{segment}</i>
             )
         ));
 
-        return italicizedText;
+        return formattedText;
     };
 
-    return (
-        <>
-            {/* Rules heading */}
-            {currentSub ?
-                <h4 className="text-center text-xl tenor-sans underline p-2">{currentSub} Rules</h4> :
-                <h4 className="text-center text-xl tenor-sans underline p-2">{currentLetter}</h4>}
 
-            {/* Rules table */}
-            <table >
-                <tr>
-                    <th>Condition</th>
-                    <th>Pronunciation</th>
-                </tr>
-                {subRules ?
-                    subRules.rules.map(rules => (
-                        <tr key={rules.key}>
-                            <td>{italicizeText(rules.cond)}</td>
-                            <td>{italicizeText(rules.pron)}</td>
-                        </tr>
-                    
-            )) :
-                primRules.rules.map(rules => (
-                    <tr key={rules.key}>
-                    <td>{italicizeText(rules.cond)}</td>
-                    <td>{italicizeText(rules.pron)}</td>
-                </tr>
-            ))
-            }
-            </table>
-        </>
+    return (
+        <div className='container-fluid'>
+            <div className='flex-col justify-center'>
+                {/* Rules heading */}
+                {currentSub ?
+                    <div className=''>
+                        <h4 className="text-center text-xl font-bold underline p-2">{currentSub} Rules</h4>
+                        <h5 className="text-center text-lg font-bold  p-2">{formatText(subRules.poss)}</h5>
+                    </div>
+                    :
+                    <div className=''>
+                        <h4 className="text-center text-xl font-bold underline p-2">{currentLetter} Rules</h4>
+                        <h5 className="text-center text-lg font-bold p-2">{formatText(primRules.poss)}</h5>
+                    </div>
+                }
+                {/* Rules table */}
+                <div className='flex justify-center'>
+                    <table className='border border-zinc-800 table-auto max-w-3xl mx-2'>
+                        <thead>
+                            <tr>
+                                <th className='border border-zinc-800 py-1 px-5 text-start'>Condition</th>
+                                <th className='border border-zinc-800 py-1 px-5 text-start'>Pronunciation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {subRules ?
+                                subRules.rules.map(rules => (
+                                    <tr key={rules.key}>
+                                        <td className='border border-zinc-800 py-1 px-5 text-wrap'>{formatText(rules.cond)}</td>
+                                        <td className='border border-zinc-800 py-1 px-5 text-wrap'>{formatText(rules.pron)}</td>
+                                    </tr>
+
+                                )) :
+                                primRules.rules.map(rules => (
+                                    <tr key={rules.key}>
+                                        <td className='border border-zinc-800 py-1 px-5 text-wrap'>{formatText(rules.cond)}</td>
+                                        <td className='border border-zinc-800 py-1 px-5 text-wrap'>{formatText(rules.pron)}</td>
+                                    </tr>
+                                ))
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     )
 }
