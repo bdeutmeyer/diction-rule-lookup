@@ -56,7 +56,7 @@ export default function RuleCard({ currentLetter, ruleSet, currentSub, subArray 
                 }
                 {/* Rules table */}
                 <div className='flex justify-center'>
-                    <table className='border border-zinc-800 table-auto max-w-3xl mx-2'>
+                    <table className='border border-zinc-800 table-auto max-w-3xl mx-2 mb-5'>
                         <thead>
                             <tr>
                                 <th className='border border-zinc-800 py-1 px-5 text-start'>Condition</th>

@@ -14,7 +14,7 @@
 }
 
 a {
-  font-weight: 500;
+  font-weight: 900;
   text-decoration: inherit;
 }
 a:hover {
@@ -25,6 +25,7 @@ a:hover {
   width: 100vw;
   height: 100vh;
   margin: 0;
+  position: relative;
 }
 
 h1 {
@@ -35,10 +36,6 @@ h1 {
 
 #header-link:hover {
   text-decoration: none;
-}
-
-.tenor-sans {
-  font-family: 'Tenor Sans', sans-serif;
 }
 
 button {
@@ -58,3 +55,14 @@ button:focus,
 button:focus-visible {
   outline: 4px auto #fafafa;
 }
+/* 
+#non-footer {
+  padding-bottom: 2.5rem;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 2.5rem;
+} */

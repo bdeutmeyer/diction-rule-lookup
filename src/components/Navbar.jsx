@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 export default function Navbar ({ handleLangChange }) {
 
     return (
-        <div className="tenor-sans bg-gradient-to-r from-zinc-700 via-zinc-500 to-zinc-700 text-center text-zinc-100 p-1">
+        <div className="bg-gradient-to-r from-zinc-700 via-zinc-500 to-zinc-700 text-center text-zinc-100 p-1">
             <Link key={1} to="/french" value="french" onClick={() => {handleLangChange()}} className="pt-2 pb-2 pr-4 pl-4 text-lg">
             French
             </Link>

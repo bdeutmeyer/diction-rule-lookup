@@ -1,13 +1,23 @@
-export default function Footer () {
+export default function Footer() {
     return (
-        <>
-            <p>Created by <a href="https://lovely-meringue-5c5a8d.netlify.app/">Beth Deutmeyer</a></p>
-            <p>Sources:</p>
-            <ul>
-                <li><a href="https://www.dictionforsingers.com/diction/diction-for-singers-2nd-edition-228.html">Diction for Singers by Joan Wall, Robert Caldwell, et al</a></li>
-                <li><a href="/">Source 2</a></li>
-                <li><a href="/">Source 3</a></li>
-            </ul>
-        </>
+        <div id="footer" className="container-fluid bg-gradient-to-r from-zinc-800 via-zinc-600 to-zinc-800 text-center text-zinc-100">
+            <div className="grid md:grid-cols-3 sm:grid-cols-2">
+                <div className="py-2 px-3 m-3">
+                    <h6>Sources:</h6>
+                    <p><a href="https://www.dictionforsingers.com/diction/diction-for-singers-2nd-edition-228.html">Diction for Singers (Wall, Caldwell, et al)</a></p>
+                    <p><a href="https://global.oup.com/academic/product/a-handbook-of-diction-for-singers-9780197639511?cc=us&lang=en&">A Handbook of Diction for Singers (Adams)</a></p>
+                </div>
+                <div className="py-2 px-3 m-3">
+                    <h6>Created by <a href="https://www.linkedin.com/in/beth-deutmeyer-4b0b73238">Beth Deutmeyer</a></h6>
+                    <p><a href="https://github.com/bdeutmeyer">GitHub</a></p>
+                    <p><a href="https://lovely-meringue-5c5a8d.netlify.app/">Portfolio</a></p>
+                </div>
+                <div className="py-2 px-3 m-3">
+                    <h6>Further resources:</h6>
+                    <p><a href="https://www.internationalphoneticassociation.org/IPAcharts/inter_chart_2018/IPA_2018.html">Interactive IPA Chart</a></p>
+                    <p><a href="https://software.sil.org/andika/">Andika font for IPA</a></p>
+                </div>
+            </div>
+        </div>
     )
 }
