@@ -42,58 +42,58 @@ export default function App() {
   //Click event handler for sub list
   const handleSubChange = (event) => {
     setCurrentSub(event.target.value)
-}
+  }
 
-let headerOne;
-let headerTwo;
-let headerThree;
-let ruleSet;
-let langHeaderFont;
-let langHeaderClassName;
-switch (currentLanguage) {
+  let headerOne;
+  let headerTwo;
+  let headerThree;
+  let ruleSet;
+  let langHeaderFont;
+  let langHeaderClassName;
+  switch (currentLanguage) {
     case 'french':
-        headerOne = 'frenchOne';
-        headerTwo = 'frenchItTwo';
-        headerThree = 'frenchThree';
-        ruleSet = frenchRules;
-        langHeaderFont = 'frHeader';
-        langHeaderClassName = 'langHeader p-3 text-center bg-gradient-to-r from-blue-700 via-zinc-100 to-red-600';
-        break;
+      headerOne = 'frenchOne';
+      headerTwo = 'frenchItTwo';
+      headerThree = 'frenchThree';
+      ruleSet = frenchRules;
+      langHeaderFont = 'frHeader';
+      langHeaderClassName = 'langHeader p-3 text-center bg-gradient-to-r from-blue-700 via-zinc-100 to-red-600';
+      break;
     case 'german':
-        headerOne = 'germanOne';
-        headerTwo = 'germanTwo';
-        headerThree = 'germanThree';     
-        ruleSet = germanRules;
-        langHeaderFont = 'grHeader';
-        langHeaderClassName = 'langHeader p-3 text-center bg-gradient-to-r from-zinc-950 via-red-500 to-yellow-400';
-        break;
+      headerOne = 'germanOne';
+      headerTwo = 'germanTwo';
+      headerThree = 'germanThree';
+      ruleSet = germanRules;
+      langHeaderFont = 'grHeader';
+      langHeaderClassName = 'langHeader p-3 text-center bg-gradient-to-r from-zinc-950 via-red-500 to-yellow-400';
+      break;
     case 'italian':
-        headerOne = 'italianOne';
-        headerTwo = 'frenchItTwo';
-        headerThree = 'italianThree';
-        ruleSet = italianRules;
-        langHeaderFont = 'itHeader';
-        langHeaderClassName = 'langHeader p-3 text-center bg-gradient-to-r from-green-700 via-zinc-100 to-red-600';
-        break;
-}
+      headerOne = 'italianOne';
+      headerTwo = 'frenchItTwo';
+      headerThree = 'italianThree';
+      ruleSet = italianRules;
+      langHeaderFont = 'itHeader';
+      langHeaderClassName = 'langHeader p-3 text-center bg-gradient-to-r from-green-700 via-zinc-100 to-red-600';
+      break;
+  }
 
   return (
-    <div className='bg-cover content'>
-      <div className='bg-gray-200/50 content'>
-      <Header 
-        className="content-center"
-        headerOne={headerOne}
-        headerTwo={headerTwo}
-        headerThree={headerThree}
-        />
-      <Navbar
-        handleLangChange={handleLangChange}
-      />
-      <Outlet 
-        context={[currentLanguage, currentLetter, handleLetterChange, subArray, currentSub, handleSubChange, ruleSet, langHeaderFont, langHeaderClassName]}
-      />
-      <Footer />
-      </div>
+    <div className='content'>
+        <div id="non-footer">
+          <Header
+            className="content-center"
+            headerOne={headerOne}
+            headerTwo={headerTwo}
+            headerThree={headerThree}
+          />
+          <Navbar
+            handleLangChange={handleLangChange}
+          />
+          <Outlet
+            context={[currentLanguage, currentLetter, handleLetterChange, subArray, currentSub, handleSubChange, ruleSet, langHeaderFont, langHeaderClassName]}
+          />
+        </div>
+        <Footer />
     </div>
   )
 }
