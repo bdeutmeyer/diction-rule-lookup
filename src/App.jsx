@@ -79,7 +79,8 @@ export default function App() {
 
   return (
     <div className='content'>
-        <div id="non-footer">
+        <div id="nf-wrap">
+          <div id="non-footer">
           <Header
             className="content-center"
             headerOne={headerOne}
@@ -92,6 +93,8 @@ export default function App() {
           <Outlet
             context={[currentLanguage, currentLetter, handleLetterChange, subArray, currentSub, handleSubChange, ruleSet, langHeaderFont, langHeaderClassName]}
           />
+          </div>
+
         </div>
         <Footer />
     </div>
