@@ -588,7 +588,7 @@ const frenchRules = [
         rules: [
             {
                 key: 1,
-                cond: 'All instances of @j@',
+                cond: '@j@',
                 pron: '#[ʒ]#'
             }
         ]
@@ -600,7 +600,7 @@ const frenchRules = [
         rules: [
             {
                 key: 1,
-                cond: 'All instances of @k@',
+                cond: '@k@',
                 pron: '#[k]#'
             }
         ]
