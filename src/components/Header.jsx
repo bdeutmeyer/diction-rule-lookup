@@ -1,6 +1,3 @@
-import '../App.css'
-import '../index.css'
-
 export default function Header ({ headerOne, headerTwo, headerThree }) {
     return (
         <div className="bg-gradient-to-r from-zinc-500 via-zinc-400 to-zinc-500">

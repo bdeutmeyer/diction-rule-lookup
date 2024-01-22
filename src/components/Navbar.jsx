@@ -1,6 +1,4 @@
 import { Link } from 'react-router-dom';
-import '../App.css'
-import '../index.css'
 
 export default function Navbar ({ handleLangChange }) {
 

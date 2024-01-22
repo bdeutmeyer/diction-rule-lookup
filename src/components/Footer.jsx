@@ -1,6 +1,3 @@
-import '../App.css'
-import '../index.css'
-
 export default function Footer() {
     return (
         <div id="footer" className="container-fluid bg-gradient-to-r from-zinc-800 via-zinc-600 to-zinc-800 text-center text-zinc-100">
