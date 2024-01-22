@@ -9,7 +9,7 @@ This site is a quick-reference guide to French, German, and Italian diction rule
 Scaffolded with Vite
 Built with ReactJS
 Styled with Tailwind
-Designed front-end only for easy, free deployment on GitHub
+Designed front-end only for easy, free deployment on Netlify
 
 ## Credits
 
