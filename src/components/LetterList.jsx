@@ -1,4 +1,6 @@
 import letters from '../data/letters'
+import '../App.css'
+import '../index.css'
 
 export default function LetterList({ handleLetterChange }) {
     return (

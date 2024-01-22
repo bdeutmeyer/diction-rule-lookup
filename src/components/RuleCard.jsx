@@ -1,4 +1,6 @@
 import React from 'react';
+import '../App.css'
+import '../index.css'
 
 export default function RuleCard({ currentLetter, ruleSet, currentSub, subArray }) {
     const subRules = subArray.find((index) => index.sub == currentSub)
