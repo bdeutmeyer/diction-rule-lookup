@@ -1,15 +1,3 @@
-#frenchBg {
-  background-image: url('./assets/images/french-flag.jpg');
-}
-
-#germanBg {
-  background-image: url('./assets/images/german-flag.jpg');
-}
-
-#italianBg {
-  background-image: url('./assets/images/italian-flag.jpg');
-}
-
 .langHeader {
   font-size: 2.2em;
   line-height: 1.1;
