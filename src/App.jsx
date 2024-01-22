@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import frenchRules from './data/frenchRules'
 import germanRules from './data/germanRules'
 import italianRules from './data/italianRules'
+import './index.css'
 import './App.css'
 
 export default function App() {
