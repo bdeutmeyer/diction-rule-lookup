@@ -1,3 +1,6 @@
+import '../App.css'
+import '../index.css'
+
 export default function SubList({ currentLetter, ruleSet, subArray, handleSubChange }) {
 
     // Extracts appropriate subcategories based on primary letter
