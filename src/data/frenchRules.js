@@ -168,7 +168,7 @@ const frenchRules = [
             {
                 key: 1,
                 cond: '@cc@ + @a@, @o@, @u@, or a consonant',
-                pron: '#[k#'
+                pron: '#[k]#'
             }, {
                 key: 2,
                 cond: '@cc@ + @e@, @i@, or @y@',
@@ -1059,7 +1059,7 @@ const frenchRules = [
                 pron: 'Silent'
             }
         ]
-    },
+    }
 ]
 
 export default frenchRules

@@ -4,12 +4,12 @@ export default function RuleCard({ currentLetter, ruleSet, currentSub, subArray 
     const subRules = subArray.find((index) => index.sub == currentSub)
     const primRules = ruleSet.find((index) => index.primary == currentLetter)
 
-    // Isolate and italicize code via ChatGPT:
-    // Function to italicize based on special markers
+    // Isolate and format code adapted from ChatGPT:
+    // Function to format based on special markers
     const formatText = (text) => {
         // Define the special marker for italicization
         const italMarker = '@';
-        const andikaMarker = '#';
+        const gentiumMarker = '#';
 
         // Split the text into segments based on the marker
         const italSegments = text.split(italMarker);
@@ -20,12 +20,12 @@ export default function RuleCard({ currentLetter, ruleSet, currentSub, subArray 
                 // Non-italicized segment
                 <span key={index}>
                     {/* Split the segment based on font marker */}
-                    {segment.split(andikaMarker).map((fontSegment, fontIndex) => (fontIndex % 2 === 0 ? (
+                    {segment.split(gentiumMarker).map((fontSegment, fontIndex) => (fontIndex % 2 === 0 ? (
                             // Non-font-changed segment
                             <span key={fontIndex}>{fontSegment}</span>
                         ) : (
                             // Font-changed segment
-                            <span key={fontIndex} className='andika'>{fontSegment}</span>
+                            <span key={fontIndex} className='gentium'>{fontSegment}</span>
                         )
                     ))}
                 </span>
@@ -42,7 +42,8 @@ export default function RuleCard({ currentLetter, ruleSet, currentSub, subArray 
     return (
         <div className='container-fluid'>
             <div className='flex-col justify-center'>
-                {/* Rules heading */}
+
+                {/* Rules heading, displays primary letter or subcategory */}
                 {currentSub ?
                     <div className=''>
                         <h4 className="text-center text-xl font-bold underline p-2">{currentSub} Rules</h4>
@@ -54,7 +55,8 @@ export default function RuleCard({ currentLetter, ruleSet, currentSub, subArray 
                         <h5 className="text-center text-lg font-bold p-2">{formatText(primRules.poss)}</h5>
                     </div>
                 }
-                {/* Rules table */}
+
+                {/* Rules table - conditionally displays either subcategory rules or primary letter rules */}
                 <div className='flex justify-center'>
                     <table className='border border-zinc-800 table-auto max-w-3xl mx-2 mb-5'>
                         <thead>

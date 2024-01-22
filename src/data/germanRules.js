@@ -639,7 +639,7 @@ const germanRules = [
                 pron: '#[ts]#'
             }
         ]
-    },
+    }
 ]
 
 export default germanRules
