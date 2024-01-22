@@ -61,11 +61,11 @@
 }
 
 @font-face {
-  font-family: AndikaW;
-  src: url(./assets/andika-font/Andika-Regular.woff2);
+  font-family: GentiumPlusW;
+  src: url(./assets/gentium-font/GentiumPlus-Regular.woff2);
 }
 
-.andika {
-  font-family: AndikaW;
+.gentium {
+  font-family: GentiumPlusW;
 }
 

@@ -3,11 +3,13 @@ import SubList from "../components/SubList";
 import RuleCard from "../components/RuleCard"
 import { useOutletContext } from "react-router-dom"
 
+// Main body of page
 export default function Language() {
     const [currentLanguage, currentLetter, handleLetterChange, subArray, currentSub, handleSubChange, ruleSet, langHeaderFont, langHeaderClassName] = useOutletContext();
 
     const langHeaderText = currentLanguage.toUpperCase()
 
+    // Sets states based on if a letter is in focus, and if that letter has subcategories
     let subsExist;
     if (currentLetter) {
         let currentLetterIndex = ruleSet.find((index) => index.primary == currentLetter)
@@ -26,6 +28,8 @@ export default function Language() {
             </div>
             <div>
                 <LetterList handleLetterChange={handleLetterChange} />
+                
+                {/* Displays subcategory buttons if there are any */}
                 {
                     subsExist === true ? <SubList
                     currentLanguage={currentLanguage}
@@ -36,6 +40,7 @@ export default function Language() {
                 /> :
                     <></>
                 }
+                {/* Displays RuleCard if there are subcategories AND one is in focus */}
                 {
                     subsExist == true && currentSub !== null ? <RuleCard
                     currentLetter={currentLetter}
@@ -45,6 +50,7 @@ export default function Language() {
                 /> : <></>
                 }
             </div>
+            {/* Displays RuleCard immediately if no subcategories exist */}
             {currentLetter && subsExist === false && currentSub === null ?
                 <div >
                     <RuleCard

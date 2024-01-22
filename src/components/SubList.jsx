@@ -1,5 +1,6 @@
 export default function SubList({ currentLetter, ruleSet, subArray, handleSubChange }) {
 
+    // Extracts appropriate subcategories based on primary letter
     if (ruleSet) {
         for (let i = 0; i < ruleSet.length; i++) {
             if (currentLetter == ruleSet[i].primary) {
