@@ -28,17 +28,20 @@ export default function Language() {
             </div>
             <div>
                 <LetterList handleLetterChange={handleLetterChange} />
-                
+
+                {/* Displays subcategory instructions */}
+                { subsExist && currentSub == null ?     <h2 className="text-center text-lg p-3 font-bold">Choose a letter group to see its rules.</h2> : <></>}
+
                 {/* Displays subcategory buttons if there are any */}
                 {
-                    subsExist === true ? <SubList
+                    subsExist === true ?
+                    <SubList
                     currentLanguage={currentLanguage}
                     currentLetter={currentLetter}
                     ruleSet={ruleSet}
                     subArray={subArray}
                     handleSubChange={handleSubChange}
-                /> :
-                    <></>
+                /> : <></>
                 }
                 {/* Displays RuleCard if there are subcategories AND one is in focus */}
                 {
@@ -61,6 +64,8 @@ export default function Language() {
                     />
                 </div> : <></>
             }
+            {/* Initial welcome/instructions */}
+            {currentLetter === null ? <h2 className="text-center text-lg p-3 font-bold">Choose a letter to see its rules.</h2> : <></>}
 
         </>
 
