@@ -15,7 +15,7 @@ export default function SubList({ currentLetter, ruleSet, subArray, handleSubCha
     return (
         <div className="container-fluid flex justify-center">
             {ruleSet && subArray ? subArray.map(subs => (
-            <button key={subs.key} value={subs.sub} onClick={handleSubChange} className='text-zinc-100 bg-zinc-700 m-3'>{subs.sub}</button>
+            <button key={subs.key} value={subs.sub} onClick={handleSubChange} className='text-zinc-100 bg-zinc-700 m-3 btn'>{subs.sub}</button>
         )) : <></> }
         </div>
     )
