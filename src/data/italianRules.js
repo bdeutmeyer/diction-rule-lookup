@@ -20,19 +20,19 @@ const italianRules = [
             {
                 key: 1,
                 cond: '@ae@',
-                pron: '#[ˈɑ ɛ]# (two syllables)'
+                pron: '#[ˈɑ ɛ]#  (two syllables)'
             }, {
                 key: 2,
                 cond: '@ai@',
-                pron: '#[ɑːi]# (diphthong)'
+                pron: '#[ɑːi]#  (diphthong)'
             }, {
                 key: 3,
                 cond: '@ao@',
-                pron: '#[ˈɑ ɔ]# (two syllables)'
+                pron: '#[ˈɑ ɔ]#  (two syllables)'
             }, {
                 key: 4,
                 cond: '@au@',
-                pron: '#[ɑːu]# (diphthong)'
+                pron: '#[ɑːu]#  (diphthong)'
             }
         ]
     }, {
@@ -149,7 +149,7 @@ const italianRules = [
             }, {
                 key: 3,
                 cond: '@e@ as the end of a stressed syllable',
-                pron: 'Usually #[e]# (see exceptions below)'
+                pron: 'Usually #[e]# (see following rules for some cases of exception)'
             }, {
                 key: 4,
                 cond: '@e@ as the end of an antepenult stressed syllable',
@@ -197,19 +197,19 @@ const italianRules = [
             {
                 key: 1,
                 cond: '@ea@',
-                pron: '#[ˈɛ ɑ]# (two syllables)'
+                pron: '#[ˈɛ ɑ]#  (two syllables)'
             }, {
                 key: 2,
                 cond: '@ei@',
-                pron: '#[ɛːi]# (diphthong)'
+                pron: '#[ɛːi]#  (diphthong)'
             }, {
                 key: 3,
                 cond: '@eo@',
-                pron: '#[ˈɛ ɔ]# (two syllables)'
+                pron: '#[ˈɛ ɔ]#  (two syllables)'
             }, {
                 key: 4,
                 cond: '@eu@',
-                pron: '#[ɛːu]# (diphthong)'
+                pron: '#[ɛːu]#  (diphthong)'
             }
         ]
     }, {
@@ -329,23 +329,23 @@ const italianRules = [
             {
                 key: 1,
                 cond: 'Interior @ia@, or final unstressed @ia@',
-                pron: '#[jɑ]# (glide)'
+                pron: '#[jɑ]#  (glide)'
             }, {
                 key: 2,
                 cond: '@ia@ in 3-letter words with no accent marks, or @ia@ in multisyllable words when the @i@ is stressed  and there is no accent mark over the @a@',
-                pron: '#[ˈi ɑ]# (two syllables)'
+                pron: '#[ˈi ɑ]#  (two syllables)'
             }, {
                 key: 3,
                 cond: 'Interior @io@, or final unstressed @io@',
-                pron: '#[jɔ]# (glide)'
+                pron: '#[jɔ]#  (glide)'
             }, {
                 key: 4,
                 cond: '@io@ in 3-letter words with no accent marks, or @io@ in multisyllable words when the @i@ is stressed and there is no accent mark over the @o@',
-                pron: '#[ˈi o]# (two syllables)'
+                pron: '#[ˈi o]#  (two syllables)'
             }, {
                 key: 5,
                 cond: 'Interior @iu@, or final unstressed @iù@',
-                pron: '#[ju]# (glide)'
+                pron: '#[ju]#  (glide)'
             }
         ]
     }, {
@@ -357,15 +357,15 @@ const italianRules = [
             {
                 key: 1,
                 cond: 'Interior @ie@, or final @iè@',
-                pron: 'Usually #[jɛ]#, sometimes #[je]# (both glides)'
+                pron: 'Usually #[jɛ]#, sometimes #[je]#  (both glides)'
             }, {
                 key: 2,
                 cond: '@ie@ in 3-letter words with no accent marks, or @ie@ in multisyllable words when the @i@ is stressed and there is no accent mark over the @e@',
-                pron: '#[ˈi e]# (two syllables)'
+                pron: '#[ˈi e]#  (two syllables)'
             }, {
                 key: 3,
                 cond: '@iei@',
-                pron: '#[jɛːi]# (triphthong)'
+                pron: '#[jɛːi]#  (triphthong)'
             }
         ]
     }, {
@@ -465,7 +465,7 @@ const italianRules = [
             }, {
                 key: 3,
                 cond: 'Stressed @o@ when final in syllable',
-                pron: 'Usually #[o]# (see exceptions below)'
+                pron: 'Usually #[o]# (see rules below for cases of exception)'
             }, {
                 key: 4,
                 cond: '@o@ as the end of an antepenult stressed syllable',
@@ -501,19 +501,19 @@ const italianRules = [
             {
                 key: 1,
                 cond: '@oe@',
-                pron: '#[ˈɔ ɑ]# (two syllables)'
+                pron: '#[ˈɔ ɑ]#  (two syllables)'
             }, {
                 key: 2,
                 cond: '@oe@',
-                pron: '#[ˈɔ ɛ]# (two syllables)'
+                pron: '#[ˈɔ ɛ]#  (two syllables)'
             }, {
                 key: 3,
                 cond: '@oi@',
-                pron: 'Usually #[ɔːi]# (diphthong)'
+                pron: 'Usually #[ɔːi]#  (diphthong)'
             }, {
                 key: 4,
                 cond: '@oia@/@oja@',
-                pron: '#[ˈɔ jɑ]# (two syllables)'
+                pron: '#[ˈɔ jɑ]#  (two syllables)'
             }
         ]
     }, {
@@ -553,15 +553,15 @@ const italianRules = [
             {
                 key: 1,
                 cond: 'Intervocalic @r@',
-                pron: '#[r]# (flipped)'
+                pron: '#[r]#  (flipped)'
             }, {
                 key: 2,
                 cond: '@r@ in all other circumstances',
-                pron: '#[r]# (rolled)'
+                pron: '#[r]#  (rolled)'
             }, {
                 key: 2,
                 cond: '@rr@',
-                pron: '#[rː r]# (extended roll)'
+                pron: '#[rː r]#  (extended roll)'
             }
         ]
     }, {
@@ -657,35 +657,35 @@ const italianRules = [
             {
                 key: 1,
                 cond: '@ua@',
-                pron: 'Usually #[wɑ]# (glide)'
+                pron: 'Usually #[wɑ]#  (glide)'
             }, {
                 key: 2,
                 cond: '@ua@ in 3-letter words with no accent mark',
-                pron: '#[ˈu ɑ]# (two syllables)'
+                pron: '#[ˈu ɑ]#  (two syllables)'
             }, {
                 key: 3,
                 cond: '@ue@',
-                pron: 'Usually #[wɛ]# (glide)'
+                pron: 'Usually #[wɛ]#  (glide)'
             }, {
                 key: 4,
                 cond: '@ue@ in 3-letter words with no accent mark',
-                pron: '#[ˈu ɛ]# (two syllables)'
+                pron: '#[ˈu ɛ]#  (two syllables)'
             }, {
                 key: 5,
                 cond: '@ui@',
-                pron: 'Usually #[wi]# (glide)'
+                pron: 'Usually #[wi]#  (glide)'
             }, {
                 key: 6,
                 cond: '@ui@ in 3-letter words with no accent mark',
-                pron: '#[ˈu i]# (two syllables)'
+                pron: '#[ˈu i]#  (two syllables)'
             }, {
                 key: 7,
                 cond: '@uo@',
-                pron: 'Usually #[wɔ]# (glide)'
+                pron: 'Usually #[wɔ]#  (glide)'
             }, {
                 key: 8,
                 cond: 'Final @uo@ in 3-letter words with no accent mark',
-                pron: '#[ˈu o]# (two syllables)'
+                pron: '#[ˈu o]#  (two syllables)'
             }
         ]
     }, {

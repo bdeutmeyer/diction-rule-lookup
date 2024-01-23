@@ -553,7 +553,7 @@ const frenchRules = [
             }, {
                 key: 2,
                 cond: 'Final or interior @il@/@ill@/@ille@ as whole syllable',
-                pron: '#[ij]# (see exception below)'
+                pron: '#[ij]# (see @mille@/@ville@/@tranquille@ exception immediately below)'
             }, {
                 key: 3,
                 cond: 'The words @mille@, @ville@, and @tranquille@ and their derivatives',

@@ -160,7 +160,7 @@ const germanRules = [
             {
                 key: 1,
                 cond: '@e@ + single consonant',
-                pron: '#[e]# (see exceptions below)'
+                pron: 'Usually #[e]#'
             }, {
                 key: 2,
                 cond: '@e@ in single-syllable word or @er-@/@her-@/@zer-@ prefix',
@@ -224,7 +224,7 @@ const germanRules = [
             }, {
                 key: 3,
                 cond: '@ig@ when final in a word/syllable',
-                pron: 'Combination = #[ɪç]# (see exception below)'
+                pron: 'Combination = #[ɪç]# (except as described in next rule)'
             }, {
                 key: 4,
                 cond: 'Word ending in @ig@ + suffix @-lich@/@-reich@',
@@ -536,7 +536,7 @@ const germanRules = [
             {
                 key: 1,
                 cond: '@u@/@uh@ + single consonant',
-                pron: '#[u]# - see exceptions below'
+                pron: 'Usually #[u]#'
             }, {
                 key: 2,
                 cond: '@u@ in @um@, @zum@, or prefix @um-@/@un-@',
