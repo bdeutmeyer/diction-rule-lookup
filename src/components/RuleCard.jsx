@@ -38,7 +38,6 @@ export default function RuleCard({ currentLetter, ruleSet, currentSub, subArray 
         return formattedText;
     };
 
-
     return (
         <div className='container-fluid'>
             <div className='flex-col justify-center'>

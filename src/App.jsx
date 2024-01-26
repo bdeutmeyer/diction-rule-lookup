@@ -94,7 +94,6 @@ export default function App() {
             context={[currentLanguage, currentLetter, handleLetterChange, subArray, currentSub, handleSubChange, ruleSet, langHeaderFont, langHeaderClassName]}
           />
           </div>
-
         </div>
         <Footer />
     </div>
